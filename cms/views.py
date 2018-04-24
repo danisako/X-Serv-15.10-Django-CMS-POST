@@ -33,7 +33,7 @@ def index(request):
 	
 	for p in paginas:
 		respuesta += "<h2>Nombre de pagina:" + p.name + "</h2><li>Contenido:" +str(p.page) + "    <li>Id:"+str(p.id)+"</br>"
-		respuesta += "<li><a href=cms/" + str(p.name) + ">Enlace a la página de: " + p.name + "</a></li><br>"
+		respuesta += "<li><a href=cms/" + str(p.name) + ">Enlace a la página de: " + p.name + "</a></br> <li><a href=edit/" + str(p.name) + ">Enlace para modificar la página de: " + p.name + "</a></li><br>" 
 
 
 	template = get_template("plantilla/index.html")
